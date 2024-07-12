@@ -1,6 +1,9 @@
 # Icliniq Assesment
 
-The LifeWink Frontend-Web - description
+The Icliniq Web APP \
+
+for backend followwed - DDD principles are applied in this project(nodejs) \
+for frontend - astro with react application
 
 ## Developer Setup
 
