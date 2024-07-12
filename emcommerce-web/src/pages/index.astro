@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainApp from "../components/main";
+---
+
+<Layout title="Welcome to Astro.">
+	<!-- <a class="button-link" href="/cart">Go to cart</a> -->
+	<main>
+		<MainApp client:load />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.button-link {
+		display: inline-block;
+		padding: 10px 20px;
+		margin: 5px;
+		font-size: 16px;
+		color: #fff;
+		background-color: #007bff;
+		border: none;
+		border-radius: 4px;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		margin-left: 15px;
+	}
+
+	.button-link:hover {
+		background-color: #0056b3;
+	}
+</style>
