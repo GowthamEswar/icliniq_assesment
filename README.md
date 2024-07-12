@@ -1,4 +1,4 @@
-# Uconnect
+# Icliniq Assesment
 
 The LifeWink Frontend-Web - description
 
@@ -58,11 +58,11 @@ Builds the app for production to the `dist` folder.\
 
 ### `API Documentation`
 
-GET /api/products: Retrieve all products.
-POST /api/products: Add a new product.
-GET /api/products/
-: Retrieve a product by ID.
+GET /api/products: Retrieve all products. \
+POST /api/products: Add a new product. \
+GET /api/products/ 
+: Retrieve a product by ID. \
 PUT /api/products/
-: Update a product by ID.
+: Update a product by ID. \
 DELETE /api/products/
-: Delete a product by ID.
+: Delete a product by ID. \
