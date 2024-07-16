@@ -5,7 +5,14 @@ import cartRoutes from './modules/cart/cart.routes';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+// sentry
+import { initSentry } from './sentry'
+import * as Sentry from '@sentry/node';
+
+
 const app = express();
+// sentry
+initSentry();
 
 connectDB();
 
@@ -16,6 +23,16 @@ dotenv.config();
 
 app.use('/api/products', productRoutes);
 app.use('/api/carts', cartRoutes);
+
+// sentry error
+app.get('/error', (req, res) => {
+    try {
+        throw new Error('Something went wrong');
+    } catch (error) {
+        Sentry.captureException(error);
+        res.status(500).send('Error captured');
+    }
+});
 
 const PORT = process.env.PORT || 3000;
 
